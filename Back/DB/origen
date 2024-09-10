@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS dota2;
+
+USE dota2;
+
+CREATE TABLE characters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    class VARCHAR(50) NOT NULL,
+    level INT NOT NULL
+);
+
+CREATE TABLE items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    rarity VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE character_items (
+    character_id INT,
+    item_id INT,
+    PRIMARY KEY (character_id, item_id),
+    FOREIGN KEY (character_id) REFERENCES characters(id) ON DELETE CASCADE,
+    FOREIGN KEY (item_id) REFERENCES items(id) ON DELETE CASCADE
+);

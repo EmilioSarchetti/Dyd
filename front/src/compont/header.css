@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #b80202; /* Color de fondo del encabezado */
+    padding: 5px 10px;
+    color: #fff;
+  }
+  
+  .logo {
+    height: 10px; /* Ajusta el tamaño del logo */
+    margin-right: 15px; /* Espacio entre el logo y el título */
+  }
+  s
+  .site-title {
+    font-size: 1.5em; /* Tamaño del texto del título */
+    margin: 0; /* Elimina márgenes predeterminados */
+  }
+  
